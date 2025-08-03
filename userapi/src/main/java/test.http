@@ -1,0 +1,21 @@
+### Получить всех пользователей
+GET http://localhost:8080/user-api/v1/users
+Accept: application/json
+
+###
+
+### Создать пользователя
+POST http://localhost:8080/user-api/v1/users
+Content-Type: application/json
+
+{
+  "name": "Alice",
+  "age": 30,
+  "country": "USA"
+}
+
+###
+
+### Фильтрация по странам
+GET http://localhost:8080/user-api/v1/additional-info?countries=USA,GERMANY
+Accept: application/json

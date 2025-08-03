@@ -5,6 +5,7 @@ import com.example.userapi.model.Country;
 import com.example.userapi.repository.UserRepository;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 @Service
@@ -14,7 +15,6 @@ public class UserService {
     public UserService(UserRepository repository) {
         this.repository = repository;
     }
-
     public List<User> getAllUsers() {
         return repository.findAll();
     }

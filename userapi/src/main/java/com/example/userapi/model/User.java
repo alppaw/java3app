@@ -16,9 +16,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "first_name")
     private String firstName;
     private Integer age;
 
     @Enumerated(EnumType.STRING)
     private Country country;
+
 }
